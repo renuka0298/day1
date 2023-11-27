@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #counting{
+                font-weight: border;
+                font-size: 150px;
+
+            }
+            button{
+                color: brown;
+                font-size: large;
+                font-weight: border;
+            }
+            
+            .parent{
+                text-align: "center";
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="parent">
+            <span id="counting"></span>
+
+        </div>
+        
+        
+        <button onclick="increment()">Increment</button>
+        <button onclick="reset()">Reset</button>
+        <button onclick="decrement()">Decrement</button>
+        <script>
+            let pqr=0;
+            document.getElementById("counting").innerText=pqr;
+            function increment(){
+
+            
+            pqr = ++pqr;
+            document.getElementById("counting").innerText=pqr;
+            if(pqr>0)
+            {
+                document.getElementById("counting").style.color="green";
+            }
+            else if(pqr ==0){
+                document.getElementById("counting").style.color="black";
+
+            }
+        }
+            function decrement(){
+            pqr=--pqr;
+            document.getElementById("counting").innerText=pqr;
+            if(pqr<0){
+                document.getElementById("counting").style.color="red";
+
+            }
+            else if(pqr==0)
+            {
+                document.getElementById("counting").style.color="black";
+            }
+            }
+            function reset(){
+            pqr=0;
+            document.getElementById("counting").innerText=pqr;
+            document.getElementById("counting").style.color="black";
+            }
+
+        </script>
+    </body>
+</html>
